@@ -62,7 +62,7 @@ namespace RERU
 
         private void เพมนกศกษาToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            (new Form7()).Show();
+            (new Form3()).Show();
         }
         public void loadData()
         {
