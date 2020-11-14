@@ -21,7 +21,6 @@ namespace RERU
         public static string connectorString = "server = localhost;Database=reru2;User ID=root;Password=;CharSet=UTF8";
         private void เพมกจกรรมToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            this.Hide();
             (new Form4()).Show();
         }
 
@@ -33,11 +32,25 @@ namespace RERU
 
         private void Form2_Load(object sender, EventArgs e)
         {
+            loadData();
+        }
+
+        private void เำToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            (new Form5()).Show();
+        }
+
+        private void เพมนกศกษาToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            (new Form7()).Show();
+        }
+        public void loadData()
+        {
             string query = "SELECT act_Name,act_Type,act_Year,act_Term FROM act";
             MySqlConnection MyConn = new MySqlConnection(connectorString);
             MySqlCommand MyComm = new MySqlCommand(query, MyConn);
             MySqlDataAdapter MyAdap = new MySqlDataAdapter();
-            try 
+            try
             {
                 MyAdap.SelectCommand = MyComm;
                 DataTable dTable = new DataTable();
@@ -48,7 +61,7 @@ namespace RERU
                 dataGridView1.Columns["act_Term"].HeaderText = "ปีการศึกษา";
                 dataGridView1.Columns["act_Year"].HeaderText = "ชั้นปีที่เข้าร่วม";
             }
-            catch(Exception ex)
+            catch (Exception ex)
             {
                 MessageBox.Show(ex.Message);
             }
@@ -56,6 +69,9 @@ namespace RERU
             dataGridView1.Refresh();
         }
 
-
+        private void refashToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            loadData();
+        }
     }
 }

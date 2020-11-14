@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form4));
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
             this.dateTimePicker2 = new System.Windows.Forms.DateTimePicker();
@@ -144,11 +145,11 @@
             // 
             this.checkedListBox1.FormattingEnabled = true;
             this.checkedListBox1.Items.AddRange(new object[] {
-            "ชั้นปีที่ 1",
-            "ชั้นปีที่ 2",
-            "ชั้นปีที่ 3",
-            "ชั้นปีที่ 4",
-            "ชั้นปีที่ 5"});
+            "1",
+            "2",
+            "3",
+            "4",
+            "5"});
             this.checkedListBox1.Location = new System.Drawing.Point(115, 217);
             this.checkedListBox1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.checkedListBox1.Name = "checkedListBox1";
@@ -215,10 +216,12 @@
             this.Controls.Add(this.dateTimePicker1);
             this.Controls.Add(this.textBox1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.MaximizeBox = false;
             this.Name = "Form4";
             this.Text = "เพิ่มกิจกรรม";
-            this.Load += new System.EventHandler(this.Form4_Load);
+            this.TopMost = true;
             this.ResumeLayout(false);
             this.PerformLayout();
 

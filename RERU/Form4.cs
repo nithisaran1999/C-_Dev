@@ -20,10 +20,7 @@ namespace RERU
 
         public static string connectorString = "server = localhost;Database=reru2;User ID=root;Password=;CharSet=UTF8";
 
-        private void Form4_Load(object sender, EventArgs e)
-        {
-            this.TopMost = true;
-        }
+
 
         private void button1_Click(object sender, EventArgs e)
         {
@@ -40,8 +37,9 @@ namespace RERU
                 try
                 {
                     string act_Year = checkedListBox1.Items[indexChecked].ToString();
+                    dateTimePicker1.CustomFormat = "yyyy-MM-dd";
+                    dateTimePicker2.CustomFormat = "yyyy-MM-dd";
                     string query = $"INSERT INTO act (act.act_Name,act.act_Date,act.act_Exp,act.act_Type,act.act_Term,act.act_Year) VALUES ('{textBox1.Text}','{dateTimePicker1.Text}','{dateTimePicker2.Text}','{comboBox1.Text}','{comboBox2.Text}/{maskedTextBox1.Text}','{act_Year}')";
-                    MessageBox.Show(query);
                     Conn.Open();
                     MySqlCommand myCommand = new MySqlCommand(query, Conn);
                     myCommand.ExecuteNonQuery();
@@ -54,9 +52,7 @@ namespace RERU
                 }
 
             }
-
-            (new Form2()).Show();
-
+            (new Form2()).Refresh();
         }
 
     }
