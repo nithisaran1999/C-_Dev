@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form2));
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.หนาหลกToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.กจกรรมToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -37,6 +38,8 @@
             this.เำToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.fToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.นกศกษาToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.ผดเเลระบบToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
@@ -47,7 +50,9 @@
             this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.หนาหลกToolStripMenuItem,
             this.กจกรรมToolStripMenuItem,
-            this.คปองToolStripMenuItem});
+            this.คปองToolStripMenuItem,
+            this.นกศกษาToolStripMenuItem,
+            this.ผดเเลระบบToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
             this.menuStrip1.Padding = new System.Windows.Forms.Padding(5, 2, 0, 2);
@@ -73,14 +78,14 @@
             // เพมกจกรรมToolStripMenuItem
             // 
             this.เพมกจกรรมToolStripMenuItem.Name = "เพมกจกรรมToolStripMenuItem";
-            this.เพมกจกรรมToolStripMenuItem.Size = new System.Drawing.Size(160, 26);
+            this.เพมกจกรรมToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
             this.เพมกจกรรมToolStripMenuItem.Text = "เพิ่มกิจกรรม";
             this.เพมกจกรรมToolStripMenuItem.Click += new System.EventHandler(this.เพมกจกรรมToolStripMenuItem_Click);
             // 
             // ลบกจกรรมToolStripMenuItem
             // 
             this.ลบกจกรรมToolStripMenuItem.Name = "ลบกจกรรมToolStripMenuItem";
-            this.ลบกจกรรมToolStripMenuItem.Size = new System.Drawing.Size(160, 26);
+            this.ลบกจกรรมToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
             this.ลบกจกรรมToolStripMenuItem.Text = "ลบกิจกรรม";
             this.ลบกจกรรมToolStripMenuItem.Click += new System.EventHandler(this.ลบกจกรรมToolStripMenuItem_Click);
             // 
@@ -96,13 +101,13 @@
             // เำToolStripMenuItem
             // 
             this.เำToolStripMenuItem.Name = "เำToolStripMenuItem";
-            this.เำToolStripMenuItem.Size = new System.Drawing.Size(189, 26);
+            this.เำToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
             this.เำToolStripMenuItem.Text = "เพิ่ม Coupon";
             // 
             // fToolStripMenuItem
             // 
             this.fToolStripMenuItem.Name = "fToolStripMenuItem";
-            this.fToolStripMenuItem.Size = new System.Drawing.Size(189, 26);
+            this.fToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
             this.fToolStripMenuItem.Text = "Coupon ทั้งหมด";
             // 
             // dataGridView1
@@ -115,6 +120,18 @@
             this.dataGridView1.Size = new System.Drawing.Size(1165, 689);
             this.dataGridView1.TabIndex = 1;
             // 
+            // นกศกษาToolStripMenuItem
+            // 
+            this.นกศกษาToolStripMenuItem.Name = "นกศกษาToolStripMenuItem";
+            this.นกศกษาToolStripMenuItem.Size = new System.Drawing.Size(75, 24);
+            this.นกศกษาToolStripMenuItem.Text = "นักศึกษา";
+            // 
+            // ผดเเลระบบToolStripMenuItem
+            // 
+            this.ผดเเลระบบToolStripMenuItem.Name = "ผดเเลระบบToolStripMenuItem";
+            this.ผดเเลระบบToolStripMenuItem.Size = new System.Drawing.Size(86, 24);
+            this.ผดเเลระบบToolStripMenuItem.Text = "ผู้ดูเเลระบบ";
+            // 
             // Form2
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -123,6 +140,7 @@
             this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.menuStrip1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MainMenuStrip = this.menuStrip1;
             this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.MaximizeBox = false;
@@ -148,5 +166,7 @@
         private System.Windows.Forms.ToolStripMenuItem เำToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem fToolStripMenuItem;
         private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.ToolStripMenuItem นกศกษาToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem ผดเเลระบบToolStripMenuItem;
     }
 }
