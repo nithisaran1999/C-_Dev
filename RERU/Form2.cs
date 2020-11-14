@@ -78,7 +78,38 @@ namespace RERU
 
         private void findData()
         {
+            string member_Year_find = null;
+            string act_Type_find = null;
+            string act_Term_find = null;
+            if (comboBox1.Text != "ทั้งหมด") { 
+             //fuck my life
+            }
+            else
+            {
+                member_Year_find = $"act_Year = {comboBox1.Text}";
+            }
 
+            string find_query = $"SELECT * FROM act WHERE act_Year = {comboBox1.Text}";
+            MySqlConnection MyConn = new MySqlConnection(connectorString);
+            MySqlCommand MyComm = new MySqlCommand(find_query, MyConn);
+            MySqlDataAdapter MyAdap = new MySqlDataAdapter();
+            try
+            {
+                MyAdap.SelectCommand = MyComm;
+                DataTable dTable = new DataTable();
+                MyAdap.Fill(dTable);
+                dataGridView1.DataSource = dTable;
+                dataGridView1.Columns["act_Name"].HeaderText = "ชื่อกิจกรรม";
+                dataGridView1.Columns["act_Type"].HeaderText = "ประเภท";
+                dataGridView1.Columns["act_Term"].HeaderText = "ปีการศึกษา";
+                dataGridView1.Columns["act_Year"].HeaderText = "ชั้นปีที่เข้าร่วม";
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+            dataGridView1.Update();
+            dataGridView1.Refresh();
         }
 
         private void button1_Click(object sender, EventArgs e)
