@@ -32,8 +32,26 @@ namespace RERU
 
         private void Form2_Load(object sender, EventArgs e)
         {
+            try
+            {
+                MySqlConnection MyConn = new MySqlConnection(connectorString);
+                string query = "SELECT act_Term FROM act GROUP BY act_Term HAVING count(act_Term) > 1";
+                MySqlDataAdapter da = new MySqlDataAdapter(query, MyConn);
+                MyConn.Open();
+                DataSet ds = new DataSet();
+                da.Fill(ds, "act");
+                comboBox3.DisplayMember = "act_Term";
+                comboBox3.ValueMember = "act_Term";
+                comboBox3.DataSource = ds.Tables["act"];
+                MyConn.Close();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
             comboBox1.SelectedIndex = 0;
             comboBox2.SelectedIndex = 0;
+            comboBox3.SelectedIndex = 0;
             loadData();
         }
 
@@ -78,43 +96,83 @@ namespace RERU
 
         private void findData()
         {
-            string member_Year_find = null;
-            string act_Type_find = null;
-            string act_Term_find = null;
-            if (comboBox1.Text != "ทั้งหมด") { 
-             //fuck my life
+            if (comboBox1.Text == "" && comboBox2.Text == "" && comboBox3.Text == "")
+            {
+                loadData();
             }
             else
             {
-                member_Year_find = $"act_Year = {comboBox1.Text}";
+                string member_Year_find = null;
+                string act_Type_find = null;
+                string act_Term_find = null;
+                if (comboBox1.Text != "ทั้งหมด")
+                {
+                    member_Year_find = $"act_Year = {comboBox1.Text}";
+                }
+
+                if (comboBox2.Text != "ทั้งหมด")
+                {
+                    if (comboBox1.Text == "ทั้งหมด")
+                    {
+                        act_Type_find = $"act_Type = '{comboBox2.Text}'";
+                    }
+                    else
+                    {
+                        act_Type_find = $"AND act_Type = '{comboBox2.Text}'";
+                    }
+                        
+                }
+
+                if (comboBox3.Text != "ทั้งหมด")
+                {
+                    if (comboBox2.Text == "ทั้งหมด" && comboBox1.Text == "ทั้งหมด")
+                    {
+                        act_Term_find = $"act_Term = '{comboBox3.Text}'";
+                    }
+                    else
+                    {
+                        act_Term_find = $"AND act_Term = '{comboBox3.Text}'";
+                    }
+                        
+                }
+
+                string find_query = $"SELECT * FROM act WHERE {member_Year_find} {act_Type_find} {act_Term_find}";
+                MessageBox.Show(find_query);
+                MySqlConnection MyConn = new MySqlConnection(connectorString);
+                MySqlCommand MyComm = new MySqlCommand(find_query, MyConn);
+                MySqlDataAdapter MyAdap = new MySqlDataAdapter();
+                try
+                {
+                    MyAdap.SelectCommand = MyComm;
+                    DataTable dTable = new DataTable();
+                    MyAdap.Fill(dTable);
+                    dataGridView1.DataSource = dTable;
+                    dataGridView1.Columns["act_Name"].HeaderText = "ชื่อกิจกรรม";
+                    dataGridView1.Columns["act_Type"].HeaderText = "ประเภท";
+                    dataGridView1.Columns["act_Term"].HeaderText = "ปีการศึกษา";
+                    dataGridView1.Columns["act_Year"].HeaderText = "ชั้นปีที่เข้าร่วม";
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show(ex.Message);
+                }
+                dataGridView1.Update();
+                dataGridView1.Refresh();
             }
 
-            string find_query = $"SELECT * FROM act WHERE act_Year = {comboBox1.Text}";
-            MySqlConnection MyConn = new MySqlConnection(connectorString);
-            MySqlCommand MyComm = new MySqlCommand(find_query, MyConn);
-            MySqlDataAdapter MyAdap = new MySqlDataAdapter();
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
             try
             {
-                MyAdap.SelectCommand = MyComm;
-                DataTable dTable = new DataTable();
-                MyAdap.Fill(dTable);
-                dataGridView1.DataSource = dTable;
-                dataGridView1.Columns["act_Name"].HeaderText = "ชื่อกิจกรรม";
-                dataGridView1.Columns["act_Type"].HeaderText = "ประเภท";
-                dataGridView1.Columns["act_Term"].HeaderText = "ปีการศึกษา";
-                dataGridView1.Columns["act_Year"].HeaderText = "ชั้นปีที่เข้าร่วม";
+                findData();
             }
             catch (Exception ex)
             {
                 MessageBox.Show(ex.Message);
             }
-            dataGridView1.Update();
-            dataGridView1.Refresh();
-        }
-
-        private void button1_Click(object sender, EventArgs e)
-        {
-            findData();
+            
         }
     }
 }
