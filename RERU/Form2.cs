@@ -32,6 +32,8 @@ namespace RERU
 
         private void Form2_Load(object sender, EventArgs e)
         {
+            comboBox1.SelectedIndex = 0;
+            comboBox2.SelectedIndex = 0;
             loadData();
         }
 
@@ -72,6 +74,16 @@ namespace RERU
         private void refashToolStripMenuItem_Click(object sender, EventArgs e)
         {
             loadData();
+        }
+
+        private void findData()
+        {
+
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            findData();
         }
     }
 }
