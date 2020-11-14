@@ -34,8 +34,8 @@ namespace RERU
             this.หนาเเรกToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.ลงทะเบยนกจกรรมToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.กจกรรมทเกยวกบฉนToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.label1 = new System.Windows.Forms.Label();
+            this.refreshToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
@@ -46,23 +46,23 @@ namespace RERU
             this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.หนาเเรกToolStripMenuItem,
             this.ลงทะเบยนกจกรรมToolStripMenuItem,
-            this.กจกรรมทเกยวกบฉนToolStripMenuItem});
+            this.refreshToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(801, 30);
+            this.menuStrip1.Size = new System.Drawing.Size(801, 24);
             this.menuStrip1.TabIndex = 0;
             this.menuStrip1.Text = "menuStrip1";
             // 
             // หนาเเรกToolStripMenuItem
             // 
             this.หนาเเรกToolStripMenuItem.Name = "หนาเเรกToolStripMenuItem";
-            this.หนาเเรกToolStripMenuItem.Size = new System.Drawing.Size(71, 24);
+            this.หนาเเรกToolStripMenuItem.Size = new System.Drawing.Size(56, 20);
             this.หนาเเรกToolStripMenuItem.Text = "หน้าเเรก";
             // 
             // ลงทะเบยนกจกรรมToolStripMenuItem
             // 
             this.ลงทะเบยนกจกรรมToolStripMenuItem.Name = "ลงทะเบยนกจกรรมToolStripMenuItem";
-            this.ลงทะเบยนกจกรรมToolStripMenuItem.Size = new System.Drawing.Size(127, 24);
+            this.ลงทะเบยนกจกรรมToolStripMenuItem.Size = new System.Drawing.Size(101, 20);
             this.ลงทะเบยนกจกรรมToolStripMenuItem.Text = "ลงทะเบียนกิจกรรม";
             this.ลงทะเบยนกจกรรมToolStripMenuItem.Click += new System.EventHandler(this.ลงทะเบยนกจกรรมToolStripMenuItem_Click);
             // 
@@ -76,20 +76,21 @@ namespace RERU
             this.dataGridView1.Size = new System.Drawing.Size(800, 502);
             this.dataGridView1.TabIndex = 1;
             // 
-            // กจกรรมทเกยวกบฉนToolStripMenuItem
-            // 
-            this.กจกรรมทเกยวกบฉนToolStripMenuItem.Name = "กจกรรมทเกยวกบฉนToolStripMenuItem";
-            this.กจกรรมทเกยวกบฉนToolStripMenuItem.Size = new System.Drawing.Size(142, 24);
-            this.กจกรรมทเกยวกบฉนToolStripMenuItem.Text = "กิจกรรมที่เกี่ยวกับฉัน";
-            // 
             // label1
             // 
             this.label1.AutoSize = true;
             this.label1.Location = new System.Drawing.Point(4, 538);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(108, 17);
+            this.label1.Size = new System.Drawing.Size(93, 16);
             this.label1.TabIndex = 2;
             this.label1.Text = "ลงทะเบียนไปเเล้ว :";
+            // 
+            // refreshToolStripMenuItem
+            // 
+            this.refreshToolStripMenuItem.Name = "refreshToolStripMenuItem";
+            this.refreshToolStripMenuItem.Size = new System.Drawing.Size(58, 20);
+            this.refreshToolStripMenuItem.Text = "Refresh";
+            this.refreshToolStripMenuItem.Click += new System.EventHandler(this.refreshToolStripMenuItem_Click);
             // 
             // Form7
             // 
@@ -119,7 +120,7 @@ namespace RERU
         private System.Windows.Forms.ToolStripMenuItem หนาเเรกToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem ลงทะเบยนกจกรรมToolStripMenuItem;
         private System.Windows.Forms.DataGridView dataGridView1;
-        private System.Windows.Forms.ToolStripMenuItem กจกรรมทเกยวกบฉนToolStripMenuItem;
         private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.ToolStripMenuItem refreshToolStripMenuItem;
     }
 }

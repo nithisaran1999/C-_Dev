@@ -27,8 +27,9 @@ namespace RERU
             (new Form6()).Show();
         }
 
-        private void Form7_Load(object sender, EventArgs e)
+        private void load()
         {
+
             string member_ID = Form1.GlobalClass.myGlobalVar;
             string query = $"SELECT * FROM regis WHERE regis.member_ID = '{member_ID}'";
             MySqlConnection MyConn = new MySqlConnection(connectorString);
@@ -42,6 +43,8 @@ namespace RERU
                 dataGridView1.DataSource = dTable;
                 dataGridView1.Columns["act_ID"].HeaderText = "ID กิจกรรม";
                 dataGridView1.Columns["coupon_Code"].HeaderText = "Coupon Code";
+                int count = dataGridView1.RowCount - 1;
+                label1.Text = "ลงทะเบียนไปเเล้ว : " + count.ToString() + " กิจกรรม";
 
             }
             catch (Exception ex)
@@ -50,6 +53,16 @@ namespace RERU
             }
             dataGridView1.Update();
             dataGridView1.Refresh();
+        }
+        private void Form7_Load(object sender, EventArgs e)
+        {
+            string member_ID = Form1.GlobalClass.myGlobalVar;
+            load();
+        }
+
+        private void refreshToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            load();
         }
     }
 }
