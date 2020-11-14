@@ -179,5 +179,15 @@ namespace RERU
         {
             (new Form8()).Show();
         }
+
+        private void ลบนกศกษาToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            (new Form9()).Show();
+        }
+
+        private void เพมผดแลระบบToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            (new Form10()).Show();
+        }
     }
 }

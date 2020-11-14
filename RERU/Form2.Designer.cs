@@ -43,7 +43,6 @@
             this.ขอมลนกศกษาToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.ผดเเลระบบToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.เพมผดแลระบบToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.ลบผดแลระบบToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.refashToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.comboBox1 = new System.Windows.Forms.ComboBox();
@@ -148,6 +147,7 @@
             this.ลบนกศกษาToolStripMenuItem.Name = "ลบนกศกษาToolStripMenuItem";
             this.ลบนกศกษาToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.ลบนกศกษาToolStripMenuItem.Text = "ลบนักศึกษา";
+            this.ลบนกศกษาToolStripMenuItem.Click += new System.EventHandler(this.ลบนกศกษาToolStripMenuItem_Click);
             // 
             // ขอมลนกศกษาToolStripMenuItem
             // 
@@ -158,8 +158,7 @@
             // ผดเเลระบบToolStripMenuItem
             // 
             this.ผดเเลระบบToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.เพมผดแลระบบToolStripMenuItem,
-            this.ลบผดแลระบบToolStripMenuItem});
+            this.เพมผดแลระบบToolStripMenuItem});
             this.ผดเเลระบบToolStripMenuItem.Name = "ผดเเลระบบToolStripMenuItem";
             this.ผดเเลระบบToolStripMenuItem.Size = new System.Drawing.Size(68, 20);
             this.ผดเเลระบบToolStripMenuItem.Text = "ผู้ดูเเลระบบ";
@@ -169,18 +168,13 @@
             this.เพมผดแลระบบToolStripMenuItem.Name = "เพมผดแลระบบToolStripMenuItem";
             this.เพมผดแลระบบToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.เพมผดแลระบบToolStripMenuItem.Text = "เพิ่มผู้ดูแลระบบ";
-            // 
-            // ลบผดแลระบบToolStripMenuItem
-            // 
-            this.ลบผดแลระบบToolStripMenuItem.Name = "ลบผดแลระบบToolStripMenuItem";
-            this.ลบผดแลระบบToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
-            this.ลบผดแลระบบToolStripMenuItem.Text = "ลบผู้ดูแลระบบ";
+            this.เพมผดแลระบบToolStripMenuItem.Click += new System.EventHandler(this.เพมผดแลระบบToolStripMenuItem_Click);
             // 
             // refashToolStripMenuItem
             // 
             this.refashToolStripMenuItem.Name = "refashToolStripMenuItem";
-            this.refashToolStripMenuItem.Size = new System.Drawing.Size(54, 20);
-            this.refashToolStripMenuItem.Text = "Refash";
+            this.refashToolStripMenuItem.Size = new System.Drawing.Size(58, 20);
+            this.refashToolStripMenuItem.Text = "Refresh";
             this.refashToolStripMenuItem.Click += new System.EventHandler(this.refashToolStripMenuItem_Click);
             // 
             // dataGridView1
@@ -322,7 +316,6 @@
         private System.Windows.Forms.ToolStripMenuItem ลบนกศกษาToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem ขอมลนกศกษาToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem เพมผดแลระบบToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem ลบผดแลระบบToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem refashToolStripMenuItem;
         private System.Windows.Forms.ComboBox comboBox2;
         private System.Windows.Forms.ComboBox comboBox1;
