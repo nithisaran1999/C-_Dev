@@ -66,3 +66,4 @@ C:\Users\nithi\source\repos\C-_Dev\RERU\obj\Debug\RERU.csproj.CoreCompileInputs.
 C:\Users\nithi\source\repos\C-_Dev\RERU\obj\Debug\RERU.csproj.CopyComplete
 C:\Users\nithi\source\repos\C-_Dev\RERU\obj\Debug\RERU.exe
 C:\Users\nithi\source\repos\C-_Dev\RERU\obj\Debug\RERU.pdb
+C:\Users\nithi\source\repos\C-_Dev\RERU\obj\Debug\RERU.Form8.resources

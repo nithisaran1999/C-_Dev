@@ -174,5 +174,10 @@ namespace RERU
             }
             
         }
+
+        private void fToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            (new Form8()).Show();
+        }
     }
 }

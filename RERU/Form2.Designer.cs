@@ -115,15 +115,16 @@
             // เำToolStripMenuItem
             // 
             this.เำToolStripMenuItem.Name = "เำToolStripMenuItem";
-            this.เำToolStripMenuItem.Size = new System.Drawing.Size(153, 22);
+            this.เำToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.เำToolStripMenuItem.Text = "เพิ่ม Coupon";
             this.เำToolStripMenuItem.Click += new System.EventHandler(this.เำToolStripMenuItem_Click);
             // 
             // fToolStripMenuItem
             // 
             this.fToolStripMenuItem.Name = "fToolStripMenuItem";
-            this.fToolStripMenuItem.Size = new System.Drawing.Size(153, 22);
+            this.fToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.fToolStripMenuItem.Text = "Coupon ทั้งหมด";
+            this.fToolStripMenuItem.Click += new System.EventHandler(this.fToolStripMenuItem_Click);
             // 
             // นกศกษาToolStripMenuItem
             // 
@@ -138,20 +139,20 @@
             // เพมนกศกษาToolStripMenuItem
             // 
             this.เพมนกศกษาToolStripMenuItem.Name = "เพมนกศกษาToolStripMenuItem";
-            this.เพมนกศกษาToolStripMenuItem.Size = new System.Drawing.Size(140, 22);
+            this.เพมนกศกษาToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.เพมนกศกษาToolStripMenuItem.Text = "เพิ่มนักศึกษา";
             this.เพมนกศกษาToolStripMenuItem.Click += new System.EventHandler(this.เพมนกศกษาToolStripMenuItem_Click);
             // 
             // ลบนกศกษาToolStripMenuItem
             // 
             this.ลบนกศกษาToolStripMenuItem.Name = "ลบนกศกษาToolStripMenuItem";
-            this.ลบนกศกษาToolStripMenuItem.Size = new System.Drawing.Size(140, 22);
+            this.ลบนกศกษาToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.ลบนกศกษาToolStripMenuItem.Text = "ลบนักศึกษา";
             // 
             // ขอมลนกศกษาToolStripMenuItem
             // 
             this.ขอมลนกศกษาToolStripMenuItem.Name = "ขอมลนกศกษาToolStripMenuItem";
-            this.ขอมลนกศกษาToolStripMenuItem.Size = new System.Drawing.Size(140, 22);
+            this.ขอมลนกศกษาToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.ขอมลนกศกษาToolStripMenuItem.Text = "ข้อมูลนักศึกษา";
             // 
             // ผดเเลระบบToolStripMenuItem
@@ -166,13 +167,13 @@
             // เพมผดแลระบบToolStripMenuItem
             // 
             this.เพมผดแลระบบToolStripMenuItem.Name = "เพมผดแลระบบToolStripMenuItem";
-            this.เพมผดแลระบบToolStripMenuItem.Size = new System.Drawing.Size(141, 22);
+            this.เพมผดแลระบบToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.เพมผดแลระบบToolStripMenuItem.Text = "เพิ่มผู้ดูแลระบบ";
             // 
             // ลบผดแลระบบToolStripMenuItem
             // 
             this.ลบผดแลระบบToolStripMenuItem.Name = "ลบผดแลระบบToolStripMenuItem";
-            this.ลบผดแลระบบToolStripMenuItem.Size = new System.Drawing.Size(141, 22);
+            this.ลบผดแลระบบToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.ลบผดแลระบบToolStripMenuItem.Text = "ลบผู้ดูแลระบบ";
             // 
             // refashToolStripMenuItem
@@ -186,7 +187,7 @@
             // 
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView1.Location = new System.Drawing.Point(0, 54);
-            this.dataGridView1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.dataGridView1.Margin = new System.Windows.Forms.Padding(2);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.RowHeadersWidth = 51;
             this.dataGridView1.RowTemplate.Height = 24;
@@ -204,7 +205,7 @@
             "4",
             "5"});
             this.comboBox1.Location = new System.Drawing.Point(38, 29);
-            this.comboBox1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.comboBox1.Margin = new System.Windows.Forms.Padding(2);
             this.comboBox1.Name = "comboBox1";
             this.comboBox1.Size = new System.Drawing.Size(92, 21);
             this.comboBox1.TabIndex = 2;
@@ -217,7 +218,7 @@
             "กิจกรรมหลัก",
             "กิจกรรมเลือก"});
             this.comboBox2.Location = new System.Drawing.Point(182, 29);
-            this.comboBox2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.comboBox2.Margin = new System.Windows.Forms.Padding(2);
             this.comboBox2.Name = "comboBox2";
             this.comboBox2.Size = new System.Drawing.Size(92, 21);
             this.comboBox2.TabIndex = 3;
@@ -258,16 +259,15 @@
             this.comboBox3.Items.AddRange(new object[] {
             "ทั้งหมด"});
             this.comboBox3.Location = new System.Drawing.Point(334, 28);
-            this.comboBox3.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.comboBox3.Margin = new System.Windows.Forms.Padding(2);
             this.comboBox3.Name = "comboBox3";
             this.comboBox3.Size = new System.Drawing.Size(128, 21);
             this.comboBox3.TabIndex = 7;
-
             // 
             // button1
             // 
             this.button1.Location = new System.Drawing.Point(466, 30);
-            this.button1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.button1.Margin = new System.Windows.Forms.Padding(2);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(56, 19);
             this.button1.TabIndex = 8;
@@ -292,7 +292,7 @@
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MainMenuStrip = this.menuStrip1;
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.MaximizeBox = false;
             this.Name = "Form2";
             this.Text = "ระบบลงทะเบียนกิจกรรม [Administrator]";
